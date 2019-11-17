@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{%  block css %}
+
+{% load static %} <link rel="stylesheet" href="{% static 'css/inicial.css' %}" >
+
+{% endblock %}
+
+{%  block content %}
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+            <h1 class="display-4"> ESTAS SEGURO DE ELIMINAR {{leche.Nombre}}???????!!!!!! </h1>
+            <form method="POST">
+                {% csrf_token %}
+                <br>
+                <br>
+
+                <div class="text-center" >
+                    <button class="btn btn-danger col-4" style="font-size:25px;" type="submit"> SI </button>
+                    <a class="btn btn-primary col-4"  style="font-size:25px;" href="/list"> NO </a>
+                </div>
+
+            </form>
+        </div>
+</div>
+{% endblock %}

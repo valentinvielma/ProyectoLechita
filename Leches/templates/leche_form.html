@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block css %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/list.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="modal-dialog text-center">
+
+    <div class="col-sm-8 main-section">
+        <h1>Crear/editar producto</h1>
+        <div class="modal-content">
+            <form class="col-12 text-center clase-form" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <br>
+                <button class="btn btn-primary text-center" type="submit">Guardar</button>
+                <a href="/list" class="btn btn-danger">Volver</a>
+
+                {% if leche %}
+
+                <br>
+                <a href="{% url 'delete' leche.id %}" class="btn btn-warning">Eliminar</a>
+
+                {% endif %}
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

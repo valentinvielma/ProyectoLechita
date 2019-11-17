@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{%  block css %}
+
+{% load static %} <link rel="stylesheet" href="{% static 'css/inicial.css' %}" >
+
+{% endblock %}
+
+{%  block content %}
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Bienvenido al sistema de gestión de leches</h1>
+            <p class="lead">En este sistema podrás gestionar todo lo referente a una bodega de alimentos</p>
+        </div>
+</div>
+{% endblock %}

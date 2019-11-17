@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block css %}
+
+{% load static %} <link rel="stylesheet" href="{% static 'css/crud.css' %}" >
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="modal-dialog text-center">
+
+    <div class="col-sm-8 main-section">
+        <h1>Seleccione su opción</h1>
+        <div class="modal-content">
+            <a class="btn btn-success" href="list">Listar</a>
+            <a class="btn btn-secondary" href="new">Nuevo</a>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

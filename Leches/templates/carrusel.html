@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{%  block css %}
+
+{% load static %} <link rel="stylesheet" href="{% static 'css/inicial.css' %}" >
+
+{% endblock %}
+
+{%  block content %}
+
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {% load static %} <img src="{% static 'img/1.jpg' %}" class="d-block w-50 mx-auto" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Purita Cereal</h5>
+          <p>Leche para niños de 18 a 72 meses.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        {% load static %} <img src="{% static 'img/2.jpg' %}" class="d-block w-50 mx-auto" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Purita Fortificada</h5>
+          <p>Leche para niños de 6 a 17 meses</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        {% load static %} <img src="{% static 'img/3.jpg' %}" class="d-block w-50 mx-auto" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Purita Mamá</h5>
+          <p>Leche para mujeres embarazadas y nodrizas</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        {% load static %} <img src="{% static 'img/4.jpg' %}" class="d-block w-50 mx-auto" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bebida Láctea años dorados</h5>
+          <p>Producto diseñado para adultos mayores</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+{% endblock %}

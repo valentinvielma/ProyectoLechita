@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block css %}
+
+{% load static %} <link rel="stylesheet" href="{% static 'css/list.css' %}" >
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="modal-dialog text-center">
+
+    <div class="col-sm-8 main-section">
+        <h1>Seleccione su opción</h1>
+        <div class="modal-content">
+            <ul class="list-group">
+                {% for leche in leches %}
+                <a href="{% url 'update' leche.id %}">
+                <li class="list-group-item"> {{leche}} </li>
+                </a>
+                {% endfor %}
+            </ul>
+        <a href="crud" class="btn btn-danger">Volver</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
